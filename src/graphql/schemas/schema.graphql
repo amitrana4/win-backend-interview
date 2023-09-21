@@ -1,0 +1,36 @@
+scalar JSON
+scalar Date
+
+type orderResponse {
+  id: Int
+  datetime: Date
+  totalfee: Int
+  services: JSON
+}
+
+input ServicesInput {
+  id: Int!
+}
+
+type Query {
+  getAllOrders: JSON
+  getOrder(
+    id: Int
+  ): JSON
+}
+
+type Mutation {
+  createOrder(
+    datetime: Date!
+    totalfee: Int!
+    services: [ServicesInput]!
+  ): orderResponse
+
+  updateOrder(
+    id: Int
+    datetime: Date!
+    totalfee: Int!
+    services: [ServicesInput]!
+  ): JSON
+
+}

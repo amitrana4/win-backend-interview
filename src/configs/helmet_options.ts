@@ -1,0 +1,17 @@
+export const helmet_options = {
+  contentSecurityPolicy: false,
+  crossOriginEmbedderPolicy: false,
+  crossOriginResourcePolicy: false,
+  crossOriginOpenerPolicy: false,
+  dnsPrefetchControl: true,
+  expectCt: true,
+  frameGuard: true,
+  hidePoweredBy: true,
+  hsts: true,
+  ieNoOpen: true,
+  noSniff: true,
+  originAgentCluster: true,
+  permittedCrossDomainPolicies: true,
+  referrerPolicy: true,
+  xssFilter: true,
+};
